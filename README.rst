@@ -1,7 +1,7 @@
 ITHACA GeoNode
 ========================
 
-You should write some docs, it's good for the soul.
+Custom GeoNode templates for ITHACA.
 
 Installation
 ------------
