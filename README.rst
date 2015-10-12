@@ -1,4 +1,4 @@
-{{ project_name|title }}
+ITHACA GeoNode
 ========================
 
 You should write some docs, it's good for the soul.
@@ -36,7 +36,7 @@ to:
 
 Add the "Directory" directive for your folder like the following example:
 
-    <Directory "/home/vagrant/my_geonode/my_geonode/">
+    <Directory "/home/user/my_geonode/my_geonode/">
 
        Order allow,deny
 
@@ -59,5 +59,3 @@ Edit the templates in my_geonode/templates, the css and images to match your nee
 In the my_geonode folder run::
 
     $ python manage.py collectstatic
-
-
