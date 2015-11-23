@@ -1,0 +1,35 @@
+{% extends "people/profile_base.html" %}
+{% load i18n avatar_tags %}
+{% load bootstrap_tags %}
+
+{% block body %}
+
+<div class="page-header">
+  <h2 class="page-title">{% trans "Edit Avatar for" %} {{ user.username }}</h2>
+</div>
+
+<div class="col-xs-3 col-md-2 profile-image">
+  <h4>{% trans "Your current avatar" %}</h4>
+  {% avatar user 240 %}
+</div>
+
+<div class="col-xs-5 col-md-6">
+  {% if not avatars %}
+  <h4>{% trans "You haven't uploaded an avatar yet. Please upload one now." %}</h4>
+  {% else %}
+  <form method="POST" action="{% url 'avatar_change' %}">
+  {{ primary_avatar_form.as_p }}
+    <p>{% csrf_token %}<input type="submit" class="btn btn-primary" value="{% trans "Choose new Default" %}" /></p>
+    <p><a class="btn btn-primary btn-danger" href="{% url 'avatar_delete' %}">{% trans "Delete Your Avatar" %}</a></p>
+  </form>
+  {% endif %}
+</div>
+
+<div class="col-xs-4 col-md-4">
+  <form enctype="multipart/form-data" method="POST" action="{% url 'avatar_add' %}">
+    {{ upload_avatar_form.as_p }}
+    <p>{% csrf_token %}<input type="submit" class="btn btn-primary" value="{% trans "Upload New Image" %}" /></p>
+  </form>
+</div>
+        
+{% endblock %}

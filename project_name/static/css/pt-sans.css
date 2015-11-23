@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url('../fonts/PTS55F-webfont.eot');
+  src: url('../fonts/PTS55F-webfont.eot?iefix') format('eot'),
+  url('../fonts/PTS55F-webfont.woff') format('woff'),
+  url('../fonts/PTS55F-webfont.ttf') format('truetype'),
+  url('../fonts/PTS55F-webfont.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PT Sans Bold';
+  src: url('../fonts/PTS75F-webfont.eot');
+  src: url('../fonts/PTS75F-webfont.eot?iefix') format('eot'),
+  url('../fonts/PTS75F-webfont.woff') format('woff'),
+  url('../fonts/PTS75F-webfont.ttf') format('truetype'),
+  url('../fonts/PTS75F-webfont.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
